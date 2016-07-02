@@ -17,5 +17,5 @@ $(window).scroll(function() {
 $('.active').click(function(){
     $('.active').css({"background-color": "#fff", "color": "#333"});
     $(this).css({"background-color": "#393", "color": "#fff"});
-})
+    })
 });
