@@ -1,0 +1,21 @@
+/* secondary navigation bar sticky and active link */
+
+$(document).ready(function() {
+    
+var secondNav = $('.second-nav')    
+$(window).scroll(function() {
+    if($(this).scrollTop() > 592) {
+        secondNav.addClass('second-nav-sticky');
+    }
+    else {  
+        secondNav.removeClass('second-nav-sticky');
+    }
+});
+    
+/* keep the button green on link click */
+    
+$('.active').click(function(){
+    $('.active').css({"background-color": "#fff", "color": "#333"});
+    $(this).css({"background-color": "#393", "color": "#fff"});
+})
+});
