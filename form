@@ -1,0 +1,65 @@
+<div id="contactTop">
+	<h3 style="color:#764b28">Contact</h3>
+	<?php
+		$name = $_POST[name];
+		$email = $_POST[email_address];
+				 
+		if(isset($_POST[submit])){
+		  if(!$_POST[name]){
+				$warnings[name] = "<p style=\"margin-top:5px;text-indent:5px;font-size:12px;color:red\"> - Missing Name</p>";				
+        $warnings[name2] = "style=color:red";
+			}
+			if(!$_POST[thoughts]){
+				$warnings[thoughts] = "<p style=\"margin-top:5px;text-indent:5px;font-size:12px;color:red\"> - Missing Message</p>";
+				$warnings[thoughts2] = "color:red";
+			}
+			if($_POST[email_address] && 
+				!preg_match('/^([a-z0-9])(([-a-z0-9._])*([a-z0-9]))*\@([a-z0-9])' .
+				'(([a-z0-9-])*([a-z0-9]))+' . '(\.([a-z0-9])([-a-z0-9_-])?([a-z0-9])+)+$/i', $_POST[email_address])){
+				$warnings[email_address] = "<p style=\"margin-top:5px;font-size:12px;color:red\"> - Invalid Email</p>";
+				$warnings[email] = "color:red";
+			}
+			if(count($warnings) > 0){
+				$warnings[required] = "color:red";
+				$valid = false;
+			}else{
+				$valid = true;
+			}
+		}
+	?>
+		<form action="<?php echo $_SERVER[PHP_SELF]?>#contact1" method="post">
+			<fieldset><p style="font-size:12px;<?php echo $warnings[required] ?>">*Required</p><br />
+				<label <?php echo $warnings[name2] ?> for="name">*Name</label><?php echo $warnings[name] ?>
+				  <input type="text" name="name" value="<?php echo $_POST[name] ?>" /><br />
+				<label style="margin-left:7px;<?php echo $warnings[email] ?>" for="email_address">Email Address</label><?php echo $warnings[email_address] ?>
+				  <input type="text" name="email_address" value="<?php echo $_POST[email_address] ?>" /><br />
+				<label style="margin-bottom:2px;<?php echo $warnings[thoughts2] ?>" for="thoughts">*Thoughts?</label><?php echo $warnings[thoughts] ?>
+				  <textarea rows="2" cols="30" name="thoughts"><?php echo $_POST[thoughts] ?></textarea><br />
+				<?php 
+				$a = strip_tags($_POST[thoughts]);
+				$str = str_replace("\n", "<br />", $a);
+				?>
+        	<input type="submit" name="submit" id="submit" value="Connect" />
+        <?php     
+          if($valid){
+				    echo '<p style="font-weight:normal;color:#fff;float:left;line-height:1em;margin-left:7px"> Thanks '.$name.'!</p>';
+				  }
+				  else{
+				  }
+				?> 
+      </fieldset>
+    </form>
+	<?php
+		if($valid){
+			echo $body;
+			$body = "Your message here...\n";
+			$body .= "$name\n";
+			$body .= "$email\n";
+			$body .= "$str\n";
+			mail('jwogen@gmail.com', 'I signed your Guestbook!', $body, 'From: jwogen@gmail.com');
+		}
+		else {
+      mail( 'jwogen@gmail.com','ERROR');    
+		}
+	?>
+</div>				
