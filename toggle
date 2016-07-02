@@ -1,0 +1,65 @@
+$(document).ready(function(){
+	$('.toggle-box').hide(); 
+	
+	$('.mobile-1').toggle(function(){
+        $('.mobile-1 img').attr('src','http://jonwogen.com/wp/wp-content/themes/insperity-theme/images/close.png');
+        $('.mobile-1').css('color','#393');
+        $('.count-1').css('color','#393');
+        $('.employee-bottom').css('background-image', 'url(http://jonwogen.com/wp/wp-content/themes/insperity-theme/images/phone-1.png)');
+		}, function () {
+		$(this).removeClass('toggle-active');
+        $('.mobile-1 img').attr('src','http://jonwogen.com/wp/wp-content/themes/insperity-theme/images/open.png');
+        $('.mobile-1').css('color','#369');
+        $('.count-1').css('color','#369');
+	});
+	
+	$('.mobile-1').click(function(){
+		$('.toggle-box.mobile-1').slideToggle();
+	});
+
+	$('.mobile-2').toggle(function(){
+        $('.mobile-2 img').attr('src','http://jonwogen.com/wp/wp-content/themes/insperity-theme/images/close.png');
+        $('.mobile-2').css('color','#393');
+        $('.count-2').css('color','#393');
+        $('.employee-bottom').css('background-image', 'url(http://jonwogen.com/wp/wp-content/themes/insperity-theme/images/phone-2.png)');
+		}, function () {
+        $('.mobile-2 img').attr('src','http://jonwogen.com/wp/wp-content/themes/insperity-theme/images/open.png');
+        $('.mobile-2').css('color','#369');
+        $('.count-2').css('color','#369');
+	});
+	
+	$('.mobile-2').click(function(){
+		$('.toggle-box.mobile-2').slideToggle();
+	});
+	
+	$('.mobile-3').toggle(function(){
+        $('.mobile-3 img').attr('src','http://jonwogen.com/wp/wp-content/themes/insperity-theme/images/close.png');
+        $('.mobile-3').css('color','#393');
+        $('.count-3').css('color','#393');
+        $('.employee-bottom').css('background-image', 'url(http://jonwogen.com/wp/wp-content/themes/insperity-theme/images/phone-3.png)');
+		}, function () {
+        $('.mobile-3 img').attr('src','http://jonwogen.com/wp/wp-content/themes/insperity-theme/images/open.png');
+        $('.mobile-3').css('color','#369');
+        $('.count-3').css('color','#369');
+	});
+	
+	$('.mobile-3').click(function(){
+		$('.toggle-box.mobile-3').slideToggle();
+	});
+
+	
+	$('.mobile-4').toggle(function(){
+        $('.mobile-4 img').attr('src','http://jonwogen.com/wp/wp-content/themes/insperity-theme/images/close.png');
+        $('.mobile-4').css('color','#393');
+        $('.count-4').css('color','#393');
+        $('.employee-bottom').css('background-image', 'url(http://jonwogen.com/wp/wp-content/themes/insperity-theme/images/phone-4.png)');
+		}, function () {
+        $('.mobile-4 img').attr('src','http://jonwogen.com/wp/wp-content/themes/insperity-theme/images/open.png');
+        $('.mobile-4').css('color','#369');
+        $('.count-4').css('color','#369');
+	});
+	
+	$('.mobile-4').click(function(){
+		$('.toggle-box.mobile-4').slideToggle();
+	});
+});
