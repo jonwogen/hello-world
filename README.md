@@ -8,7 +8,9 @@ I am picking through some older code snippets trying to find some interesting it
 
 2 - appointment-banner - a strategically placed appointment banner in all pages that are not the appointment page, search "jw added appointment banner", simple change in WordPress PHP
 
-3 - error-404-ambigram-rotate - I really enjoy creating ambigrams which are words that appear the same way upside-down and right side up, and designed my 404 page at jonwogen.com/g to be a bit confusing as the user clicks buttons the ambigram rotates to reveal itself
+3 - error-404-ambigram-rotate - I really enjoy creating ambigrams which are words that appear the same way upside-down and right side up, and designed my 404 page at http://jonwogen.com/g to be a bit confusing as the user clicks buttons the ambigram rotates to reveal itself
+
+4 - flash-actionscript - I included this for fun, the flash animation is all in actionscript with no timeline movement, http://jonwogen.com/project2/index.html, click step one
 
 4 - form - contact form at jonwogen.com, done in php
 
