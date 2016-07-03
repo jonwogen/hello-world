@@ -4,11 +4,11 @@ I did have an account set up, I just didn't really use it.
 
 I am picking through some older code snippets trying to find some interesting items. Most of it is not.
 
-1 - 404-ambigram-rotate - I really enjoy creating ambigrams which are words that appear the same way upside-down and right side up, and designed my 404 page at jonwogen.com/g to be a bit confusing as the user clicks buttons the ambigram rotates to reveal itself
+1 - accordion - a simple accordion and contextual html that hides and reveals text and changes an indicator image on click, done in jQuery and Bootstrap
 
-2 - accordion - a simple accordion and contextual html that hides and reveals text and changes an indicator image on click, done in jQuery and Bootstrap
+2 - appointment-banner - a strategically placed appointment banner in all pages that are not the appointment page, search "jw added appointment banner", simple change in WordPress PHP
 
-3 - appointment-banner - a strategically placed appointment banner in all pages that are not the appointment page, search "jw added appointment banner", simple change in WordPress PHP
+3 - error-404-ambigram-rotate - I really enjoy creating ambigrams which are words that appear the same way upside-down and right side up, and designed my 404 page at jonwogen.com/g to be a bit confusing as the user clicks buttons the ambigram rotates to reveal itself
 
 4 - form - contact form at jonwogen.com, done in php
 
