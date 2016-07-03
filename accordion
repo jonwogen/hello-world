@@ -54,7 +54,7 @@
         <div class="panel">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">2 Online benefits enrollment<i class="indicator accordion-toggle-open"></i></a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">3 Who should you hire?<i class="indicator accordion-toggle-open"></i></a>
                 </h4>
             </div>
             <div id="collapse3" class="panel-collapse collapse">
