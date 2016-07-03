@@ -1,7 +1,6 @@
 /* secondary navigation bar sticky and active link */
 
 $(document).ready(function() {
-    
 var secondNav = $('.second-nav')    
 $(window).scroll(function() {
     if($(this).scrollTop() > 592) {
