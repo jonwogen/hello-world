@@ -1,0 +1,124 @@
+import flash.events.MouseEvent;
+import flash.events.Event;
+import fl.transitions.Tween;
+import fl.transitions.easing.*;
+import fl.transitions.TweenEvent;
+
+var avTopTo = avTop.x;
+var avMeatTo = avMeat.x;
+var avPitTo = avPit.x;
+var knifeToX = knife.x;
+var knifeToY = knife.y;
+var knifeToR = knife.rotation;
+var knifeToR2 = knife2.rotation;
+var avPitR = avPit.rotation;
+var rindTo = rind.x;
+var knifeTo2Y = knife2.y;
+var knifeTo2X = knife2.x;
+var spoonMoveY = spoon.y;
+knife.visible = false;
+knife2.visible = false;
+spoon.visible = false;
+smashMix.visible = false;
+restartB.visible = false;
+
+buttonStart.addEventListener(MouseEvent.CLICK,showKnife);
+knife.addEventListener(MouseEvent.CLICK,cutKnife);
+
+function showKnife(e:Event):void {
+	knife.visible = true;
+}
+
+function cutKnife(e:Event):void {
+	knifeToY = 200;
+	knifeToR = -45;
+knife.addEventListener(MouseEvent.CLICK,rotateKnife);
+function rotateKnife(e:Event):void {
+	knifeToR = 0;
+	knifeToX = 200;
+	knife.addEventListener(MouseEvent.CLICK,removeKnife);
+function removeKnife(e:Event):void {
+	knifeToR = 180;
+knife.addEventListener(MouseEvent.CLICK,removeKnife);
+function removeKnife(e:Event):void {
+	knifeToX = -200;
+avTop.addEventListener(MouseEvent.CLICK,moveAvTop);
+function moveAvTop(e:Event):void {
+	avTopTo = 205;
+	avMeatTo = 45;
+	avPitTo = 90;
+	rindTo = 45;
+avMeat.addEventListener(MouseEvent.CLICK,moveAvMeat);
+function moveAvMeat(e:Event):void {
+	avTopTo = 600;
+	avMeatTo = 125;
+	rindTo = 125;
+	avPitTo = 170;
+avMeat.addEventListener(MouseEvent.CLICK,showKnife2);
+function showKnife2(e:Event):void {
+	knife2.visible = true;
+
+knife2.addEventListener(MouseEvent.CLICK,rotateKnife2);
+function rotateKnife2(e:Event):void {
+	knifeToR2 = 90;
+	knifeTo2Y = 150;
+	avPitR = 90;
+avPit.addEventListener(MouseEvent.CLICK,moveKnifePit);
+function moveKnifePit(e:Event):void {
+	knifeTo2X = -50;
+	avPitTo = -50;
+avMeat.addEventListener(MouseEvent.CLICK,showSpoon);
+function showSpoon(e:Event):void {
+	spoon.visible = true;
+	avPitTo = -50;
+spoon.addEventListener(MouseEvent.CLICK,moveSpoon);
+function moveSpoon(e:Event):void {
+	spoonMoveY = 310;
+avMeat.addEventListener(MouseEvent.CLICK,moveSpoonMeat);
+function moveSpoonMeat(e:Event):void {
+	spoonMoveY = 500;
+	rindTo = 45;
+	avMeatTo = 205;
+avMeat.addEventListener(MouseEvent.CLICK, moveRind);
+function moveRind(e:Event):void {
+	rindTo = -200;
+	avMeatTo = 125;
+avMeat.addEventListener(MouseEvent.CLICK, smash);
+function smash(e:Event):void {
+	avMeat.visible = false;
+	smashMix.visible = true;
+	restartB.visible = true;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+
+
+addEventListener(Event.ENTER_FRAME,onLoop);
+function onLoop(e:Event):void{
+avTop.x += easeIt(avTop.x, avTopTo, 5);
+avMeat.x += easeIt(avMeat.x, avMeatTo, 5);
+avPit.x += easeIt(avPit.x, avPitTo, 5);
+rind.x += easeIt(rind.x, rindTo, 5);
+knife.x += easeIt(knife.x, knifeToX, 10);
+knife.y += easeIt(knife.y, knifeToY, 10);
+knife.rotation += easeIt(knife.rotation, knifeToR, 8);
+knife2.rotation += easeIt(knife2.rotation, knifeToR2, 8);
+knife2.y += easeIt(knife2.y, knifeTo2Y, 10);
+knife2.x += easeIt(knife2.x, knifeTo2X, 10);
+avPit.rotation += easeIt(avPit.rotation, avPitR, 8);
+spoon.y += easeIt(spoon.y, spoonMoveY, 10);
+}
+function easeIt(orig:Number, dest:Number, reducer:Number):Number{
+return(dest-orig)/reducer;
+}
