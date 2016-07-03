@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -49,6 +48,17 @@
             </div>
             <div id="collapse2" class="panel-collapse collapse">
                 <div class="panel-body">Employees can view and print their paystubs, W-2 forms, paid time off balance and benefits information.
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">2 Online benefits enrollment<i class="indicator accordion-toggle-open"></i></a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">Jon Wogen should be hired for the developer position because he is a JOY to work with and he's clearly hilarious.
                 </div>
             </div>
         </div>
