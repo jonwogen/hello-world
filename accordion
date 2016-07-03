@@ -1,10 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>bootstrap-accordian</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/second-nav.js"></script>
+<script src="js/accordion-toggle.js"></script>
+<style>
+    .panel-heading .accordion-toggle-open:before {
+        content: url(images/open.png);
+        position: relative;
+        top: 8px;
+        left: 15px;
+    }
+    .panel-heading .accordion-toggle-close:before {
+        content: url(images/close.png);
+        position: relative;
+        top: 8px;
+        left: 15px;
+    }
+
+</style>      
+</head>
+<body>            
+<div class="container"> 
+    <div class="panel-group" id="accordion">
+        <div class="panel">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">1 Instant access to forms and data<i class="indicator accordion-toggle-open"></i></a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">Employees can view and print their paystubs, W-2 forms, paid time off balance and benefits information.
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">2 Online benefits enrollment<i class="indicator accordion-toggle-open"></i></a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">Employees can view and print their paystubs, W-2 forms, paid time off balance and benefits information.
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
 <script>
 function toggleImage(e) {
     $(e.target)
         .prev('.panel-heading')
-        .find('i.indicator')
+        .find("i.indicator")
         .toggleClass('accordion-toggle-close');
 }
-$('#accordion').on('hide.bs.collapse', toggleImage);
-$('#accordion').on('show.bs.collapse', toggleImage);
-</script> 
+$('#accordion').on('hidden.bs.collapse', toggleImage);
+$('#accordion').on('shown.bs.collapse', toggleImage);
+</script>    
+</body>
+</html>
