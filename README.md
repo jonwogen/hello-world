@@ -23,3 +23,9 @@ I am picking through some older code snippets trying to find some interesting it
 9 - sticky-nav - secondary navigation on this particular page, sticks after scrolling past a certain height, links that are clicked to anchors keep an active link look.
 
 10 - toggle - not sure why I am including this as it is clunky, this is some toggle and image switching jQuery, not accordion style, I got it to do what I needed it to do but it doesn't look pretty, it looks like I could have used arrays and set up a loop
+
+I hope you get the idea here. I would love to immerse myself in more traditional coding but in my most recent role I was obligated to use existing plugins and themes. You have inspired me to trash a theme for a site I am working on and revisit it using _S.
+
+Thanks,
+
+Jon Wogen
