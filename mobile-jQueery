@@ -1,0 +1,33 @@
+$(document).ready(function(){
+  if ($("#wrapper").width() < 480){
+    $(".workDiv,.workDiv1,.aboutDiv,.contactDiv,.twitterDiv").hide(0);
+    $("#workButton").click(function(){
+    $(".aboutDiv,.contactDiv,.twitterDiv").hide(0);
+    $(".workDiv,.workDiv1").slideDown(500);
+  });	
+  $("#aboutButton").click(function(){
+    $(".workDiv,.workDiv1,.contactDiv,.twitterDiv").hide(0);
+    $(".aboutDiv").slideDown(500);
+  });
+  $("#contactButton").click(function(){
+    $(".workDiv,.workDiv1,.aboutDiv,.twitterDiv").hide(0);
+    $(".contactDiv").slideDown(500);
+  });
+  } else {
+}
+var winWid = $(window).width();
+var limit = 480;
+
+function refresh() {
+   var w =  winWid < limit ? (location.reload(true)) :  ( winWid > limit ? (location.reload(true)) : winWid = limit );
+}
+
+var tOut;
+$(window).resize(function() {
+    var resWin = $(window).width();
+    clearTimeout(tOut);
+    if ( (winWid > limit && resWin < limit) || (winWid < limit && resWin > limit) ) {        
+    tOut = setTimeout(refresh, 100);
+    }
+});
+});
