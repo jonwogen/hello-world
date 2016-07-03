@@ -1,0 +1,20 @@
+<script>
+$(document).ready(function() {
+  $("#one").rotate({bind:{
+    click: function(){
+      $("#img").rotate({
+        angle: 0,
+        animateTo:180
+      })
+    }
+  }})
+  $("#two").rotate({bind:{
+    click: function(){
+      $("#img, #unLogo").rotate({
+        angle: 0,
+        animateTo:-180
+      })
+    }
+  }})
+});
+</script>
