@@ -35,20 +35,19 @@
 				  <input type="text" name="email_address" value="<?php echo $_POST[email_address] ?>" /><br />
 				<label style="margin-bottom:2px;<?php echo $warnings[thoughts2] ?>" for="thoughts">*Thoughts?</label><?php echo $warnings[thoughts] ?>
 				  <textarea rows="2" cols="30" name="thoughts"><?php echo $_POST[thoughts] ?></textarea><br />
-				<?php 
-				$a = strip_tags($_POST[thoughts]);
-				$str = str_replace("\n", "<br />", $a);
-				?>
-        	<input type="submit" name="submit" id="submit" value="Connect" />
-        <?php     
-          if($valid){
-				    echo '<p style="font-weight:normal;color:#fff;float:left;line-height:1em;margin-left:7px"> Thanks '.$name.'!</p>';
-				  }
-				  else{
-				  }
-				?> 
-      </fieldset>
-    </form>
+				  <?php 
+					$a = strip_tags($_POST[thoughts]);
+					$str = str_replace("\n", "<br />", $a);
+				  ?>
+        			  <input type="submit" name="submit" id="submit" value="Connect" />
+        			  <?php     
+          				if($valid){
+						echo '<p style="font-weight:normal;color:#fff;float:left;line-height:1em;margin-left:7px"> Thanks '.$name.'!</p>';
+					} else {
+					}
+				  ?> 
+      			</fieldset>
+    		</form>
 	<?php
 		if($valid){
 			echo $body;
@@ -57,9 +56,8 @@
 			$body .= "$email\n";
 			$body .= "$str\n";
 			mail('jwogen@gmail.com', 'I signed your Guestbook!', $body, 'From: jwogen@gmail.com');
-		}
-		else {
-      mail( 'jwogen@gmail.com','ERROR');    
+		} else {
+      			mail( 'jwogen@gmail.com','ERROR');    
 		}
 	?>
 </div>				
