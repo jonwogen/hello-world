@@ -59,7 +59,7 @@
 function toggleImage(e) {
     $(e.target)
         .prev('.panel-heading')
-        .find("i.indicator")
+        .find('i.indicator')
         .toggleClass('accordion-toggle-close');
 }
 $('#accordion').on('hidden.bs.collapse', toggleImage);
